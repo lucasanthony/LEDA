@@ -1,5 +1,7 @@
 package sorting.linearSorting;
 
+import java.util.Arrays;
+
 import sorting.AbstractSorting;
 
 /**
@@ -21,14 +23,14 @@ public class CountingSort extends AbstractSorting<Integer> {
 					maior = array[i];
 				}
 			}
-			Integer[] contadores = new Integer[maior];
+			Integer[] contadores = new Integer[maior+1];
 
 			for (int i = 0; i < contadores.length; i++) {
 				contadores[i] = 0;
 			}
 
 			for (int i = leftIndex; i <= rightIndex; i++) {
-				contadores[array[i] - 1]++;
+				contadores[array[i]]++;
 			}
 
 			for (int i = 1; i < contadores.length; i++) {
@@ -36,12 +38,15 @@ public class CountingSort extends AbstractSorting<Integer> {
 			}
 
 			for (int i = rightIndex; i >= leftIndex; i--) {
-				int index = contadores[array[i] - 1] - 1;
+				int index = contadores[array[i]] - 1;
 				retorno[index] = array[i];
-				contadores[array[i] - 1]--;
+				contadores[array[i]]--;
 			}
 
-			array = retorno;
+			for (int i = leftIndex; i <= rightIndex; i++) {
+				array[i] = retorno[i];
+			}
+
 		}
 	}
 
