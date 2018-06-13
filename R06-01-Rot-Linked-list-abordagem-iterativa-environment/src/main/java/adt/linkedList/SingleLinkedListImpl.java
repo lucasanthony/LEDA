@@ -1,5 +1,7 @@
 package adt.linkedList;
 
+import java.util.Arrays;
+
 public class SingleLinkedListImpl<T> implements LinkedList<T> {
 
 	protected SingleLinkedListNode<T> head;
@@ -109,6 +111,21 @@ public class SingleLinkedListImpl<T> implements LinkedList<T> {
 				node.setNext(new SingleLinkedListNode<T>(element, aux));
 			}
 		}
+	}
+
+	public void reverse() {
+		SingleLinkedListNode<T> aux = this.head.next;
+		while (!aux.isNIL()) {
+			this.remove(aux.getData());
+			this.insertFirst(aux.getData());
+			aux = aux.getNext();
+			System.out.println(Arrays.toString(this.toArray()));
+		}
+	}
+
+	public void insertFirst(T element) {
+		SingleLinkedListNode<T> newHead = new SingleLinkedListNode<T>(element, this.head);
+		this.setHead(newHead);
 	}
 
 	public SingleLinkedListNode<T> getHead() {
