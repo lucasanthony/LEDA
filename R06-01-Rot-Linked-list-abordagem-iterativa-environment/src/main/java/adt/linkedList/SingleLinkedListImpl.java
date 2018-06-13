@@ -86,6 +86,31 @@ public class SingleLinkedListImpl<T> implements LinkedList<T> {
 		return (T[]) array;
 	}
 
+	public void insereOrdenado(T element) {
+		if (this.isEmpty())
+			insert(element);
+
+		else if ((int) element < (int) this.head.getData()) {
+			SingleLinkedListNode<T> headAux = this.head;
+			this.setHead(new SingleLinkedListNode<T>(element, headAux));
+		}
+
+		else {
+			SingleLinkedListNode<T> node = this.head;
+			while (!node.getNext().isNIL() && (int) node.getData() < (int) element
+					&& (int) node.getNext().getData() < (int) element)
+				node = node.getNext();
+
+			if (node.getNext().isNIL())
+				node.setNext(new SingleLinkedListNode<T>(element, new SingleLinkedListNode<>()));
+
+			else {
+				SingleLinkedListNode<T> aux = node.getNext();
+				node.setNext(new SingleLinkedListNode<T>(element, aux));
+			}
+		}
+	}
+
 	public SingleLinkedListNode<T> getHead() {
 		return head;
 	}

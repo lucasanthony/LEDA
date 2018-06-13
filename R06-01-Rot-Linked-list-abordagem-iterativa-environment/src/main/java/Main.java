@@ -1,18 +1,22 @@
+import java.util.Arrays;
+
 import adt.linkedList.DoubleLinkedListImpl;
+import adt.linkedList.SingleLinkedListImpl;
 
 public class Main {
 
 	public static void main(String[] args) {
-		DoubleLinkedListImpl dlinked = new DoubleLinkedListImpl<Integer>();
-
-		dlinked.insert(1);
-		dlinked.insert(2);
-		dlinked.insert(3);
-		dlinked.insert(4);
-		dlinked.insert(5);
-		System.out.println(dlinked.getLast());
-		dlinked.remove(5);
-		System.out.println(dlinked.getLast());
+		SingleLinkedListImpl<Integer> single = new SingleLinkedListImpl<Integer>();
+		
+		single.insereOrdenado(5);
+		single.insereOrdenado(4);
+		single.insereOrdenado(3);
+		single.insereOrdenado(30);
+		single.insereOrdenado(0);
+		single.insereOrdenado(2);
+		single.insereOrdenado(1);
+		System.out.println(Arrays.toString(single.toArray()));
+		
 	}
 
 }
