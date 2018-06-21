@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-06-21T14:06:49.718-0300</date>
+  <logger>LUCAS ANTHONY FERREIRA DE OLIVEIRA</logger>
+  <level>FINE</level>
+  <message>File 116110367-LUCAS ANTHONY FERREIRA DE OLIVEIRA.zip was received. It was sent by LUCAS ANTHONY FERREIRA DE OLIVEIRA from IP 192.168.200.112</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-06-21T17:25:28.570-0300</date>
+  <logger>LUCAS ANTHONY FERREIRA DE OLIVEIRA</logger>
+  <level>FINE</level>
+  <message>File 116110367-LUCAS ANTHONY FERREIRA DE OLIVEIRA.zip was received. It was sent by LUCAS ANTHONY FERREIRA DE OLIVEIRA from IP 192.168.200.112</message>
+</record>
